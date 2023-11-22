@@ -1,0 +1,99 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    main {
+        width: 100%;
+        height: 100vh;
+        video {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .textContent {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            color: white;
+            background-color: transparent;
+            h1 {
+                letter-spacing: 4px;
+                font-size: 50px;
+                z-index: 1;
+            }
+            .toggle {
+                background-color: rgba(12, 11, 11, 0.527);
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                display: flex;
+                align-items: end;
+                .btn {
+                    margin: 30px;
+                    .switch {
+                        width: 100px;
+                        height: 40px;
+                        background-color: #fff;
+                        display: flex;
+                        color: black;
+                        border-radius: 5px;
+                        .text {
+                            width: 50%;
+                            height: inherit;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-right: 1px;
+                            border-left: 1px;
+                        }
+                        .switcher {
+                            background-color: blue;
+                            width: 50px;
+                            height: inherit;
+                            border-radius: 20px;
+                            position: absolute;
+                            transition: 1s ease;
+                            animation: animate .3s ease forwards;
+                        }
+                        @keyframes animate {
+                            from {
+                                left: 83px;
+                            }
+                            to {
+                                left: 31px;
+                            }
+                        }
+                        
+                        .pause {
+                            background-color: rgb(238, 105, 16);
+                            width: 50px;
+                            height: inherit;
+                            position: absolute;
+                            border-radius: 20px;
+                            transition: 1s ease;
+                            animation: animates .3s ease forwards;
+                        }
+                        @keyframes animates {
+                            from {
+                                left: 31px;
+                            }
+                            to {
+                                left: 83px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
